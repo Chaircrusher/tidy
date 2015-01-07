@@ -23,27 +23,6 @@ set(tidy_SRC
   tidylib.c
   mappedio.c
   )
-set(tidy_HDRS
-  access.h
-  attrdict.h
-  attrs.h
-  clean.h
-  config.h
-  entities.h
-  fileio.h
-  forward.h
-  lexer.h
-  mappedio.h
-  message.h
-  parser.h
-  pprint.h
-  streamio.h
-  tags.h
-  tmbstr.h
-  utf8.h
-  tidy-int.h
-  version.h)
-
 add_library(tidy ${tidy_SRC})
 
 install(TARGETS tidy
@@ -52,6 +31,28 @@ install(TARGETS tidy
   ARCHIVE DESTINATION lib
   )
 
-INSTALL(FILES ${tidy_HDRS}
-  DESTINATION include
-  )
+
+# set(tidy_HDRS
+#   access.h
+#   attrdict.h
+#   attrs.h
+#   clean.h
+#   config.h
+#   entities.h
+#   fileio.h
+#   forward.h
+#   lexer.h
+#   mappedio.h
+#   message.h
+#   parser.h
+#   pprint.h
+#   streamio.h
+#   tags.h
+#   tmbstr.h
+#   utf8.h
+#   tidy-int.h
+#   version.h)
+
+# INSTALL(FILES ${tidy_HDRS}
+#   DESTINATION include
+#   )
